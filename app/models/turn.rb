@@ -7,4 +7,17 @@ class Turn < ApplicationRecord
     'S' => 1, 'T' => 1, 'U' => 1, 'V' => 4, 'W' =>  4, 'X' => 8,
     'Y' => 4, 'Z' => 10
   }
+
+  def score
+    return nil if word.blank? || word.length > 7
+
+    scores = word.chars.map { |letter| LETTER_SCORES[letter] }
+    return nil if scores.any?(&:nil?)
+
+    if word.length == 7
+      scores.sum + 50
+    else
+      scores.sum
+    end
+  end
 end
