@@ -20,4 +20,26 @@ class Turn < ApplicationRecord
       scores.sum
     end
   end
+
+  def self.highest_scoring
+    all.reduce do |best_turn, turn|
+      if turn.score > best_turn.score     # New turn has better score
+        turn
+      elsif best_turn.score > turn.score  # New turn has worse score
+        best_turn
+      else                                # Scores are tied
+        # Tie-breaking logic
+        best_len = best_turn.word.length
+        turn_len = turn.word.length
+
+        if best_len == 7
+          best_turn
+        elsif turn_len == 7
+          turn
+        else
+          [best_turn, turn].min_by { |t| t.word.length }
+        end
+      end
+    end
+  end
 end
