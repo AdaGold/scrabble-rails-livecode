@@ -22,3 +22,5 @@ Our database consists of three models, `Turn`, `Player`, and `TileBag`. We will 
   Each player has a name, a tray of up to seven tiles, and a history of turns that they have played.
 
   Additionally, players have the ability to play a word using the tiles in their tray. Each time a player plays a new word a `Turn` instance is created and added to their history of turns.
+
+  [Panopto video recording](https://adaacademy.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ee125340-159c-499f-8181-a8c100397765)
