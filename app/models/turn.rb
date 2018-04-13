@@ -1,4 +1,5 @@
 class Turn < ApplicationRecord
+  belongs_to :player
 
   LETTER_SCORES = {
     'A' => 1, 'B' => 3, 'C' => 3, 'D' => 2, 'E' =>  1, 'F' => 4,
