@@ -1,1 +1,8 @@
 <h1>Player <%= @player.name %></h1>
+
+<h2>Current tile tray:</h2>
+<% @player.tile_tray.chars.each do |tile| %>
+  <div class="tile">
+    <p><%= tile %></p>
+  </div>
+<% end %>
