@@ -6,3 +6,20 @@
     <p><%= tile %></p>
   </div>
 <% end %>
+
+<h2>Turn history:</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Word</th>
+      <th>Score</th>
+    </tr>
+  </thead>
+  <% @player.turns.order(id: :desc).each do |turn| %>
+    <tr>
+      <td><%= turn.word %></td>
+      <td><%= turn.score %></td>
+    </tr>
+  <% end %>
+</table>
