@@ -24,3 +24,8 @@ Each player has a name, a tray of up to seven tiles, and a history of turns that
 Additionally, players have the ability to play a word using the tiles in their tray. Each time a player plays a new word a `Turn` instance is created and added to their history of turns.
 
 [Panopto video recording](https://adaacademy.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ee125340-159c-499f-8181-a8c100397765)
+
+### Chapter 3 - Player details page
+In this chapter we will take our Rails project which currently consists only of model logic and turn it into a complete, if small, web application.
+
+This means we will need to create a Controller for the actions related to our Player model, as well as a view template for the details page, and of course the proper route configuration.
