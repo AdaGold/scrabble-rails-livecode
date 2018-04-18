@@ -29,3 +29,5 @@ Additionally, players have the ability to play a word using the tiles in their t
 In this chapter we will take our Rails project which currently consists only of model logic and turn it into a complete, if small, web application.
 
 This means we will need to create a Controller for the actions related to our Player model, as well as a view template for the details page, and of course the proper route configuration.
+
+[Panopto video recording](https://adaacademy.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=31ca6e7b-3f13-449c-9ec8-a8c50177828d)
